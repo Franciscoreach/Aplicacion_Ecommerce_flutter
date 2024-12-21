@@ -59,13 +59,30 @@ class EcommerceBloc extends Bloc<EcommerceEvent, EcommerceState> {
 
   }
 
-  void _onUpdateCartQuantityEvent(UpdateCartQuantityEvent event, Emitter<EcommerceState> emit){
+  void _onUpdateCartQuantityEvent(UpdateCartQuantityEvent event, Emitter<EcommerceState> emit) {
 
+  final updatedCart = state.cart.map((product) {
+    if (product.id == event.productId) {
+      final newQuantity = product.quantity + event.quantityChange;
+      if (newQuantity >= 1) {
+        return product.copyWith(quantity: newQuantity);
+      }
+    }
+    return product;
+    }).toList();
+
+    emit(state.copyWith(cart: updatedCart));
   }
 
-  void _onRemoveCartItemEvent(RemoveCartItemEvent event, Emitter<EcommerceState> emit){
+  
 
+  void _onRemoveCartItemEvent(RemoveCartItemEvent event, Emitter<EcommerceState> emit) {
+  // Filtramos el carrito para eliminar el producto con el ID proporcionado
+  final updatedCart = state.cart.where((product) => product.id != event.productId).toList();
+
+  emit(state.copyWith(cart: updatedCart));
   }
+
 
 
 }
