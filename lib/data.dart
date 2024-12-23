@@ -11,7 +11,7 @@ List<Map<String, dynamic>> productsJson = [
     "description": "Samsung Galaxy Buds Pro True Wireless Black",
     "product": "HeadPhone",
     "image_url":
-        "https://images.samsung.com/is/image/samsung/p6pim/cl/2407/gallery/cl-galaxy-buds3-pro-r630-sm-r630nzaalta-542134215?%24650_519_PNG%24",
+        "https://cdn.shopify.com/s/files/1/0448/8921/1040/files/es-galaxy-buds3-pro-r630-sm-r630nzaaphe-542344297.png?v=1720724983",
     "price": 100,
   },
   {
@@ -27,7 +27,7 @@ List<Map<String, dynamic>> productsJson = [
     "description": "Notebook ASUS Vivobook Go 14 E1404 Intel Core i3-N305",
     "product": "Notebook",
     "image_url":
-        "https://resource.logitech.com/w_800,c_lpad,ar_1:1,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/products/video-conferencing/zone-true-wireless-earbuds/zone-true-wireless-earbuds-gallery-1-graphite.png",
+        "https://cdn.shopify.com/s/files/1/2554/0310/files/ASUS_Vivobook_Go_15_Intel_Core_i3_N305_8GB_RAM_512GB_SSD_15.6_Windows_11_Multimax_Panama_Computadoras_Dell_Lenovo_Apple_ASUS_MSI_Huawei_PSN0109240_1.jpg?v=1732564642",
     "price": 400,
   },
   {

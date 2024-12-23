@@ -182,10 +182,10 @@ class CartPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      "\$${product.price * product.quantity}",
+                      "\$${(product.price * product.quantity).toStringAsFixed(0)}",
                       style: TextStyle(
                         color: AppColors.black,
-                        fontWeight: FontWeight.w700,
+                        fontWeight: FontWeight.w900,
                       ),
                     ),
                     Row(

@@ -9,11 +9,13 @@ enum HomeScreenSate {
 
 class EcommerceState extends Equatable {
 
+  final List<ProductModel> allProducts;
   final List<ProductModel> products;
   final List<ProductModel> cart;
   final HomeScreenSate homeScreenSate;
 
   const EcommerceState({
+    required this.allProducts,
     required this.products,
     required this.cart,
     required this.homeScreenSate,
@@ -21,6 +23,7 @@ class EcommerceState extends Equatable {
 
   factory EcommerceState.initial(){
     return const EcommerceState(
+      allProducts: [],
       products: [], 
       cart: [],
       homeScreenSate: HomeScreenSate.none,
@@ -28,11 +31,13 @@ class EcommerceState extends Equatable {
   }
 
   EcommerceState copyWith({
+    List<ProductModel>? allProducts,
     List<ProductModel>? products,
     List<ProductModel>? cart,
-    HomeScreenSate ? homeScreenSate,
+    HomeScreenSate? homeScreenSate,
   }) {
     return EcommerceState(
+      allProducts: allProducts ?? this.allProducts,
       products: products ?? this.products,
       cart: cart ?? this.cart,
       homeScreenSate: homeScreenSate ?? this.homeScreenSate
@@ -40,7 +45,5 @@ class EcommerceState extends Equatable {
   }
   
   @override
-  List<Object> get props => [products, cart, homeScreenSate];
+  List<Object> get props => [allProducts, products, cart, homeScreenSate];
 }
-
-
